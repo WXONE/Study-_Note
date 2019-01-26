@@ -1,0 +1,377 @@
+//#include <iostream>
+#include <cstdio> 
+#include <cstring>
+//#include <string>
+#include <cmath>
+#include <algorithm>
+using namespace std;
+#define ll long long
+#define llu unsigned long long
+#define mst(a,b) memset(a,b,sizeof(a))
+#define Max 1000
+
+char zuxian[100],chengyuan[100],fubei[100];
+
+struct Tree
+{
+	char name[100];           
+	char sex[100];              
+	char fed[100];//配偶
+	char thing[1000];//个人简介
+	char borth[100];//生日
+	int level;//辈分
+	struct Tree *child;              //孩子指针
+	struct Tree *brother;            //兄弟指针
+	struct Tree *parent;             //父亲指针
+	int lenth;
+	
+};
+
+Tree *Create(Tree *t,char s[])
+{
+	Tree *p;
+	p = new Tree;
+	strcpy(p->name,s);                    //祖先名字
+	p->brother=NULL;                      //规定祖先只有一个人，即指向兄弟的指针为空，指向父亲节点的指针为空
+	p->child=NULL;                        //暂且将孩子指针赋值为空
+	p->parent=NULL;
+	p->level=1;                           //记录辈分，为第一代
+	cout<<"请输入性别："<<endl;
+	cin>>p->sex;
+	cout<<"请输入配偶名称："<<endl;
+	cin>>p->fed;
+	cout<<"请输入生日："<<endl;
+	cin>>p->borth;
+	cout<<"请输入个人简介："<<endl;
+	cin>>p->thing;
+     
+     t=p;
+     return t;                  //创建祖先成功； 
+}
+
+
+Tree *Find(Tree *b,char cname[])    //查询
+{
+    Tree *p;
+	if(b==NULL)
+	     return NULL;
+    else
+	      if(strcmp(b->name,cname)==0)
+		  {
+		  	return b;
+		  }	
+		  else
+		  {
+		  	   p=Find(b->child,cname);
+		  	   {
+		  	        if(p!=NULL)
+					   return p;
+					else
+					   return Find(b->brother,cname);	
+			   }
+		  }
+} 
+
+//模糊查询 
+void MohuFind(Tree *b,char mname[])
+{
+	int i,j,k = 0,l;//,l = 0,m = 0;
+	int f = 0; //f = 1 为符合条件 
+	int N1 = 0,N2 = 0;//N1记录子串长度，N2记录连续字串个数 
+	Tree *p;
+	if(b == NULL)
+		printf("族谱为空");
+	else if(strcmp(b->name,mname) == 0)
+		printf("%s\n",b->name) ;
+	else{
+		for(l = 0; l <b->lenth; l++)
+		{
+			i = strlen(b->name);//i记录每一个结点的姓名 
+			j = strlen(mname);  //j记录被查询结点 
+			int flag = 0;			//flag的功能一是计数，二是作为被查询字符串的字符元素编号 
+			for(k = 0;k < i;k++)
+			{/*flag初始值为0，可以从mname的第一个字符开始
+			逐一扫描并且与结点的每一个字符比较，如果相同，
+			flag自加1，使mname做好比较下一个字符的准备 */ 
+				if(b->name[k] == mname[flag])
+					flag++; 
+				
+			}
+			if(flag == j)
+				printf("%s\n",b->name);
+			else
+				printf("查询失败\n");
+			
+		}
+
+	}
+}
+
+void coutxinxi(Tree *b,char cname[])    //查询个人信息； 
+{
+	Tree *p;
+	p=Find(b,cname);
+	cout<<"名字:\t"<<p->name;
+	cout<<"第"<<p->level<<"代";
+	cout<<"父辈:\t"<<p->parent->name;
+	cout<<"性别:\t"<<p->sex;
+	cout<<"配偶:\t"<<p->fed;
+	cout<<"生日:\t"<<p->borth;
+	cout<<"个人简介:\t"<<p->thing;
+}
+
+
+// 查询上三代 
+
+
+ 
+int chaxunbeifen(Tree *b,char chaxunmingzi[])   //查询辈分 
+{
+	Tree *p;
+	p = Find(b,chaxunmingzi);
+	if(p==NULL) 
+	     return 0;
+	else
+	     return p->level;
+} 
+
+void Add(Tree *b,char parent[],char erzi[])    //添加新成员
+{
+	int zuigaomax=1;
+	char chengyuan[100];
+	Tree *p,*q;
+	p = Find(b,parent);
+	if(p==NULL)
+	{
+		cout<<"双亲不存在"<<endl;
+		return ;
+	}
+	q= new Tree;
+	strcpy(q->name,erzi);
+	q->level = p->level+1;
+	cout<<"请输入性别:"<<endl;
+	cin>>chengyuan;
+	strcpy(q->sex,chengyuan);
+	cout<<"请输入配偶名称:"<<endl;
+	cin>>chengyuan;
+	strcpy(q->fed,chengyuan);
+	cout<<"请输入生日:"<<endl;
+	cin>>chengyuan;
+	strcpy(q->borth,chengyuan);
+	cout<<"请输入个人简介:"<<endl;
+	cin>>chengyuan;
+    strcpy(q->thing,chengyuan);
+    if(p->level+1 > zuigaomax)
+    {
+    	zuigaomax = p->level+1;
+	}
+    q->child =NULL;
+    q->brother=NULL;
+    q->parent =NULL;
+       if(p->child==NULL)
+            p->child=q;
+        else
+           {
+           	  p=p->child;
+           	  while(p->brother!=NULL)
+           	  {
+           	  	 p = p->brother;
+			  }
+           	    p->brother = q;
+		   }
+} 
+
+
+void modify(Tree *b,char chaxunmingzi[])    //修改
+{
+	char chengyuan[100];
+	Tree *p;
+	p = Find(b,chaxunmingzi);
+	if(p==NULL)
+	{
+		cout<<"查无此人";
+		return ;
+	} 
+	 cout<<"请输入修改信息"<<endl;               //查到之后进行逐项修改
+	cout<<"新姓名:";
+	cin>>chengyuan;
+	strcpy(p->name,chengyuan);
+	cout<<"请输入性别:"<<endl;
+	cin>>chengyuan;
+	strcpy(p->sex,chengyuan);
+	cout<<"请输入配偶名称:"<<endl;
+	cin>>chengyuan;
+	strcpy(p->fed,chengyuan);
+	cout<<"请输入生日----(格式：****--**--**)"<<endl;
+	cin>>chengyuan;
+	strcpy(p->borth,chengyuan);
+	cout<<"请输入个人简介:"<<endl;
+	cin>>chengyuan;
+	strcpy(p->thing,chengyuan);
+}
+
+
+
+void  Traversal(Tree *b)    //遍历；
+{
+	if(b!=NULL)
+	{
+		for(int i=0;i<b->level;i++)
+			cout<<" ";
+		cout<<"第"<<b->level<<"代";
+		cout<<b->name<<"---";
+		cout<<"配偶:"<<b->fed<<"---";
+		cout<<"出生日期："<<b->brother<<endl;
+		if(b->child!=NULL || b->brother!=NULL )
+		{
+			Traversal(b->child);
+			Traversal(b->brother);
+		} 
+	}
+} 
+
+void creat(Tree * &u)
+{
+	char zuxian[100];
+	cout<<"开始创建族谱，我的儿子哟，我很开心呀！"<<endl;
+	cout<<"祖先名字"<<endl;
+	cin>>zuxian;
+	u = Create(u,zuxian);
+	cout<<"恭喜下面都是我儿子"<<endl; 
+}
+
+void exit()
+{
+	exit(0);
+}
+
+int menu_select()                             //菜单函数定义
+{
+	char c;
+	printf("===============================================================\n");
+	printf("|--------------------家族成员信息管理系统 v1.0----------------|\n");
+	printf("|                                                             |\n");
+	printf("|                         1.添加成员                          |\n");
+	printf("|                         2.查询个人信息                      |\n");
+	printf("|                         3.查看族谱                          |\n");
+	printf("|                         4.查询辈分                          |\n");
+	printf("|                         5.修改信息                          |\n");
+	printf("|                         6.创建族谱                          |\n");
+	printf("|                         7.退出系统                          |\n");
+	
+	printf("***************************************************************\n");
+	printf("                    请输入（1-7）进行操作：\n");
+	do{
+		scanf("%c",&c);
+	}while(c<'1'||c>'9');
+	return c-48;
+	
+}
+
+
+int main()
+{
+	Tree *u;
+	u=NULL;
+	int n;
+    
+	while(1)
+	{
+		n=menu_select();
+		
+		if(n==1)
+		{
+			if(u==NULL)
+			{
+				cout<<"暂未创建族谱，请输入功能键8创建族谱！"<<endl;
+				continue;
+			}
+			cout<<"请输入添加成员名称:"<<endl;
+			cin>>chengyuan;
+			cout<<"请输入添加成员的长辈名称:"<<endl;
+			cin>>fubei;
+			Add(u,fubei,chengyuan);
+			
+		}
+		else if(n==2)
+		{
+			if(u==NULL)
+			{
+				cout<<"暂未创建族谱，请输入功能键8创建族谱！"<<endl;
+				continue;
+			}
+			cout<<"请输入查询名称:";
+			cin>>chengyuan;
+			
+			Tree *o=Find(u,chengyuan);
+			
+			if(o)
+			{
+				cout<<"名字:\t"<<o->name<<endl;
+				cout<<"辈分:\t"<<o->level<<endl;
+				cout<<"性别:\t"<<o->sex<<endl;
+				cout<<"配偶:\t"<<o->fed<<endl;
+				cout<<"生日:\t"<<o->borth<<endl;
+				cout<<"个人简介:\t"<<o->thing<<endl;
+				if(o->parent==NULL)
+				{
+					
+				}
+				else
+					cout<<"爸爸为"<<o->parent->name<<endl;
+			}
+			else
+			{
+				cout<<"查无此人"<<endl; }
+		}
+		else if(n==3)
+		{
+			if(u==NULL)
+			{
+				cout<<"暂未创建族谱，请输入功能键8创建族谱！"<<endl;
+				continue;
+			}
+			Traversal(u);
+		}
+		else if(n==4)
+		{
+			if(u==NULL)
+			{
+				cout<<"暂未创建族谱，请输入功能键8创建族谱！"<<endl;
+				continue;
+			}
+			cout<<"请输入查询名称:"; cin>>chengyuan;
+			int y=chaxunbeifen(u,chengyuan);
+			if(y)
+			{
+				cout<<"辈分为:第"<<y<<"代"<<endl;
+			}
+			else
+			{
+				cout<<"查无此人"<<endl;
+			}
+			
+		}
+		else if(n==5)
+		{
+			if(u==NULL)
+			{
+				cout<<"暂未创建族谱，请输入功能键8创建族谱！"<<endl;
+				continue;
+			}
+			cout<<"请输入要修改的成员名称"<<endl;
+			cin>>chengyuan;
+			modify(u,chengyuan);
+		}
+		else if(n==7) 
+		{
+			exit();
+		}
+		else if(n==6) 
+		{
+			creat(u);
+		}
+	}
+	return 0;
+}
+
