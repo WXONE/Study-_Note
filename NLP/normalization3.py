@@ -1,9 +1,11 @@
+from numpy import unicode
+
 from contractions import CONTRACTION_MAP
 import re
 import nltk
 import string
 from nltk.stem import WordNetLemmatizer
-from HTMLParser import HTMLParser
+from html.parser import HTMLParser
 import unicodedata
 
 stopword_list = nltk.corpus.stopwords.words('english')
@@ -19,7 +21,8 @@ def tokenize_text(text):
 
 def expand_contractions(text, contraction_mapping):
     contractions_pattern = re.compile('({})'.format('|'.join(contraction_mapping.keys())),
-                                      flags=re.IGNORECASE | re.DOTALL)
+                          
+            flags=re.IGNORECASE | re.DOTALL)
 
     def expand_match(contraction):
         match = contraction.group(0)
