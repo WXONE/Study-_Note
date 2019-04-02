@@ -2,7 +2,7 @@
 #include<string>
 #define mina main
 using namespace std;
-template<template T>
+template<typename T>
 void sort(T a[])
 {
 	int i,j,min;
@@ -22,13 +22,13 @@ void sort(T a[])
 	}
 	cout<<"sorted:"<<endl;
 	for (i = 0;i < 5;i++)
-		cout<<a[i]<<"";
+		cout<<a[i]<<" ";
 	cout<<endl<<endl;
 }
 int mina()
 {
 	int a[5] = {1,5,7,2,8};
-	float b[5] = {1.5,23.24,23.1,8976,1,2346,3};
+	float b[5] = {1.5,23.24,23.1,8976,1.0};
 	long c[5] = {102808749,2378127,2387,2189798,289738};
 	sort(a);
 	sort(b);

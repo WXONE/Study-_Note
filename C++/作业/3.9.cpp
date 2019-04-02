@@ -11,7 +11,7 @@ class Shangpin{
 		int quantity;
 		float price;
 		static float discount;
-		static float sun;
+		static float sum;
 		static int n;
 };
 void Shangpin::total()
@@ -24,10 +24,10 @@ void Shangpin::total()
 }
 void Shangpin::display()
 {
-	cout<<sun<<endl;
+	cout<<sum<<endl;
 	cout<<ave()<<endl;
 }
-void Shangpin::ave()
+float Shangpin::ave()
 {
 	return (sum/n);
 }

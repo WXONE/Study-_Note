@@ -2,15 +2,15 @@
 using namespace std;
 class Student{
 	public:
-		Student(int num,float s):number(n),score(s){}
+		Student(int n,float s):num(n),score(s){}
 		int num ;
 		float score;
 };
-void main()
+int main()
 {Student stu[5] = {
 	Student(1707004340,100.0),Student(1707004301,60.5),
 	Student(1707004342,89.2),Student(1707004341,99.0),
-	Student(1707004323,92,1);}
+	Student(1707004323,92.1)};
 	void max(Student[]);
 	Student *p = &stu[0];
 	max(p);
@@ -28,6 +28,6 @@ void max(Student *arr)
 			k  = i;
 		}
 	 } 
-	cot<<arr[k].num<<""<<max_score<<endl;
+	cout<<arr[k].num<<" "<<max_score<<endl;
 }
 

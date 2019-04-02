@@ -4,12 +4,13 @@ using namespace std;
 int main()
 {
 	int i;
-	string s1[5] = {"c++ teacher is so handsome","Pxxxhub","c++","artist","deep dark fantastic"};
+	string s1[5] = {"c++ teacher is so handsome",
+	"PH","c++","artist","deep dark fantastic"};
 	void sort(string []);
 	sort(s1);
 	for(i = 0;i < 5;i++)
 	{
-		cout<<s[i]<<""<<endl;
+		cout<<s1[i]<<""<<endl;
 		
 	}
 	return 0;

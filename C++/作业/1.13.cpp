@@ -33,7 +33,7 @@ void sort(int  a[])
 	}
 	cout<<"sorted:"<<endl;
 	for (i = 0;i < 5;i++)
-		cout<<a[i]<<"";
+		cout<<a[i]<<" ";
 	cout<<endl<<endl;
 }
 void sort(float a[])
@@ -55,7 +55,7 @@ void sort(float a[])
 	}
 	cout<<"sorted:"<<endl;
 	for (i = 0;i < 5;i++)
-		cout<<a[i]<<"";
+		cout<<a[i]<<" ";
 	cout<<endl<<endl;
 }
 void sort(long a[])
@@ -77,6 +77,6 @@ void sort(long a[])
 	cout<<"sorted:"<<endl;
 
 	for (i = 0;i < 5;i++)
-		cout<<a[i]<<"";
+		cout<<a[i]<<" ";
 	cout<<endl<<endl;
 }
