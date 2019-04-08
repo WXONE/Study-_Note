@@ -35,8 +35,8 @@ int MonthMaxDay(int year,int month)
 		case 8:
 		case 10:
 		case 12:days = 31;break;
-		case 2:if(year % 4 == 0 && year % 100 != 0||y % 400 == 0) days = 29;else days = 28;break;
-		default:days = 30;break
+		case 2:if(year % 4 == 0 && year % 100 != 0||year % 400 == 0) days = 29;else days = 28;break;
+		default:days = 30;break;
 	}
 	return days;
 }
@@ -45,7 +45,7 @@ void TDate::Show()
 	cout<<year<<"年"<<month<<"月"<<day<<"日"<<endl;
 	
 }
-void TDate::SetDate(int y,int month,int d)
+void TDate::SetDate(int y,int m,int d)
 {
 	year = y;
 	month = m;
@@ -54,7 +54,7 @@ void TDate::SetDate(int y,int month,int d)
 void TDate::AddOneDay()
 {
 	day = day + 1;
-	if(day > MaxMonthDay(year,month))
+	if(day > MonthMaxDay(year,month))
 	{
 		month = month + 1;
 		day = 1;
@@ -71,7 +71,7 @@ int main()
 	cout<<"不带参数的对象: ";
 	d.Show();
 	TDate d1(2019);
-	cout<<"构造函数重载"； 
+	cout<<"构造函数重载";
 	d1.Show();
 	TDate d2(2019,2,28);
 	cout<<"带两个参数";
@@ -80,11 +80,11 @@ int main()
 	cout<<"三个参数";
 	d3.Show();
 	
-	d3.SetDate(2019.2.28);
+	d3.SetDate(2019,2,28);
 	cout<<"重新设置日期";
 	d3.Show();
 	cout<<"增加一天后";
 	d3.AddOneDay();
 	d3.Show();
-	returen 0;
+	return 0;
 }
