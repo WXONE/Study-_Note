@@ -5,20 +5,20 @@ class TDate{
 		TDate()
 		{
 			year = 2018;month = 1;day = 1;
-			cout<<"调用缺省的构造函数"<<endl;
+			cout<<".调用缺省的构造函数"<<endl;
 			 
 		}
 		TDate(int y,int m = 1,int d = 1)
 		{
 			year = y;month = m;day = d;
-			cout<<"调用带参数的构造函数"<<endl;
+			cout<<".调用带参数的构造函数"<<endl;
 			
 		}
 		
 		void SetDate(int y,int m,int d);
 		void AddOneDay();
 		void Show();
-		~TDate(){cout<<"调用析构函数"<<endl; }
+		~TDate(){cout<<".调用析构函数"<<endl; }
 	private:
 		int year;
 		int month;
@@ -42,7 +42,7 @@ int MonthMaxDay(int year,int month)
 }
 void TDate::Show()
 {
-	cout<<year<<"年"<<month<<"月"<<day<<"日"<<endl;
+	cout<<year<<".年"<<month<<".月"<<day<<".日"<<endl;
 	
 }
 void TDate::SetDate(int y,int m,int d)
@@ -68,22 +68,22 @@ void TDate::AddOneDay()
 int main()
 {
 	TDate d;
-	cout<<"不带参数的对象: ";
+	cout<<".不带参数的对象: ";
 	d.Show();
 	TDate d1(2019);
-	cout<<"构造函数重载";
+	cout<<".构造函数重载";
 	d1.Show();
 	TDate d2(2019,2,28);
-	cout<<"带两个参数";
+	cout<<".带两个参数";
 	d2.Show();
 	TDate d3(2019,4,02);
-	cout<<"三个参数";
+	cout<<".三个参数";
 	d3.Show();
 	
 	d3.SetDate(2019,2,28);
-	cout<<"重新设置日期";
+	cout<<".重新设置日期";
 	d3.Show();
-	cout<<"增加一天后";
+	cout<<".增加一天后";
 	d3.AddOneDay();
 	d3.Show();
 	return 0;

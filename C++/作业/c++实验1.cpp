@@ -6,7 +6,7 @@ int main()
 {
 	int i;
 	float radius,a,b,area;
-	cout<<"图形类型代码如下：1.圆，2.长方形，3.正方形";
+	cout<<" :图形类型如下 ：1.圆，2.长方形，3.正方形";
 	cin>>i;
 	switch(i)
 	{
