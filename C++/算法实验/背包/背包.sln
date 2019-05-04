@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "背包", "背包\背包.vcxproj", "{20CB24EF-DF01-4420-B10C-E6F1A08DD789}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20CB24EF-DF01-4420-B10C-E6F1A08DD789}.Debug|x64.ActiveCfg = Debug|x64
+		{20CB24EF-DF01-4420-B10C-E6F1A08DD789}.Debug|x64.Build.0 = Debug|x64
+		{20CB24EF-DF01-4420-B10C-E6F1A08DD789}.Debug|x86.ActiveCfg = Debug|Win32
+		{20CB24EF-DF01-4420-B10C-E6F1A08DD789}.Debug|x86.Build.0 = Debug|Win32
+		{20CB24EF-DF01-4420-B10C-E6F1A08DD789}.Release|x64.ActiveCfg = Release|x64
+		{20CB24EF-DF01-4420-B10C-E6F1A08DD789}.Release|x64.Build.0 = Release|x64
+		{20CB24EF-DF01-4420-B10C-E6F1A08DD789}.Release|x86.ActiveCfg = Release|Win32
+		{20CB24EF-DF01-4420-B10C-E6F1A08DD789}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F30051C4-E8AA-4569-BB00-9F4DC94D2372}
+	EndGlobalSection
+EndGlobal
