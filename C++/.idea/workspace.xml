@@ -11,13 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3486f639-340a-4594-86cf-d681a2e41558" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NLP/.idea/NLP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../NLP/.idea/NLP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NLP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NLP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NLP/.ipynb_checkpoints/文本相似度和聚类-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../NLP/.ipynb_checkpoints/文本相似度和聚类-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NLP/normalization4.py" beforeDir="false" afterPath="$PROJECT_DIR$/../NLP/normalization4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NLP/文本相似度和聚类.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../NLP/文本相似度和聚类.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/算法实验/背包/.vs/背包/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/算法实验/背包/.vs/背包/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/算法实验/背包/.vs/背包/v15/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/算法实验/背包/.vs/背包/v15/Browse.VC.db" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="140">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -93,10 +88,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2001" />
-    <option name="y" value="156" />
-    <option name="width" value="1400" />
-    <option name="height" value="784" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -152,16 +147,17 @@
       <workItem from="1552566943339" duration="181000" />
       <workItem from="1552994697384" duration="336000" />
       <workItem from="1552995034179" duration="162000" />
+      <workItem from="1557231683424" duration="66000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3260000" />
+    <option name="totallyTimeSpent" value="3326000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20628998" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20911528" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -218,8 +214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="140">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
