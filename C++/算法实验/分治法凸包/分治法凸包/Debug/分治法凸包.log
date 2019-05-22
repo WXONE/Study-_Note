@@ -1,0 +1,3 @@
+﻿  可视化凸包.cpp
+可视化凸包.obj : error LNK2005: _main 已经在 分治法凸包.obj 中定义
+D:\Study-_Note\C++\算法实验\分治法凸包\Debug\分治法凸包.exe : fatal error LNK1169: 找到一个或多个多重定义的符号

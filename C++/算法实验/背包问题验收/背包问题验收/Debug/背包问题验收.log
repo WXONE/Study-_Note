@@ -1,0 +1,28 @@
+﻿  源.cpp
+d:\study-_note\c++\算法实验\背包问题验收\背包问题验收\源.cpp(37): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+d:\study-_note\c++\算法实验\背包问题验收\背包问题验收\源.cpp(82): error C4996: '_swprintf': This function or variable may be unsafe. Consider using swprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\corecrt_wstdio.h(1446): note: 参见“_swprintf”的声明
+d:\study-_note\c++\算法实验\背包问题验收\背包问题验收\源.cpp(86): error C4996: '_swprintf': This function or variable may be unsafe. Consider using swprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\corecrt_wstdio.h(1446): note: 参见“_swprintf”的声明
+d:\study-_note\c++\算法实验\背包问题验收\背包问题验收\源.cpp(90): error C4996: '_swprintf': This function or variable may be unsafe. Consider using swprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\corecrt_wstdio.h(1446): note: 参见“_swprintf”的声明
+d:\study-_note\c++\算法实验\背包问题验收\背包问题验收\源.cpp(94): error C4996: '_swprintf': This function or variable may be unsafe. Consider using swprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\corecrt_wstdio.h(1446): note: 参见“_swprintf”的声明
+d:\study-_note\c++\算法实验\背包问题验收\背包问题验收\源.cpp(101): error C4996: '_swprintf': This function or variable may be unsafe. Consider using swprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\corecrt_wstdio.h(1446): note: 参见“_swprintf”的声明
+d:\study-_note\c++\算法实验\背包问题验收\背包问题验收\源.cpp(133): error C4996: '_swprintf': This function or variable may be unsafe. Consider using swprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\corecrt_wstdio.h(1446): note: 参见“_swprintf”的声明
+d:\study-_note\c++\算法实验\背包问题验收\背包问题验收\源.cpp(146): error C4996: '_swprintf': This function or variable may be unsafe. Consider using swprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\corecrt_wstdio.h(1446): note: 参见“_swprintf”的声明
+d:\study-_note\c++\算法实验\背包问题验收\背包问题验收\源.cpp(152): error C4996: '_swprintf': This function or variable may be unsafe. Consider using swprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\corecrt_wstdio.h(1446): note: 参见“_swprintf”的声明
+d:\study-_note\c++\算法实验\背包问题验收\背包问题验收\源.cpp(157): error C4996: '_swprintf': This function or variable may be unsafe. Consider using swprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\corecrt_wstdio.h(1446): note: 参见“_swprintf”的声明
+d:\study-_note\c++\算法实验\背包问题验收\背包问题验收\源.cpp(162): error C4996: '_swprintf': This function or variable may be unsafe. Consider using swprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\corecrt_wstdio.h(1446): note: 参见“_swprintf”的声明
+d:\study-_note\c++\算法实验\背包问题验收\背包问题验收\源.cpp(167): error C4996: '_swprintf': This function or variable may be unsafe. Consider using swprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\corecrt_wstdio.h(1446): note: 参见“_swprintf”的声明
+d:\study-_note\c++\算法实验\背包问题验收\背包问题验收\源.cpp(196): error C4996: '_swprintf': This function or variable may be unsafe. Consider using swprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\corecrt_wstdio.h(1446): note: 参见“_swprintf”的声明
+d:\study-_note\c++\算法实验\背包问题验收\背包问题验收\源.cpp(215): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+d:\study-_note\c++\算法实验\背包问题验收\背包问题验收\源.cpp(251): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
