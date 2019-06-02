@@ -7,14 +7,3 @@ D:\Study-_Note\单片机\定时器实验\dingshiqi.uvproj
 Project File Date:  05/30/2019
 
 <h2>Output:</h2>
-Build target 'Target 1'
-linking...
-*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
-    SYMBOL:  ?C_START
-    MODULE:  STARTUP.obj (?C_STARTUP)
-*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
-    SYMBOL:  ?C_START
-    MODULE:  STARTUP.obj (?C_STARTUP)
-    ADDRESS: 080AH
-Program Size: data=9.0 xdata=0 code=15
-"dingshiqi" - 0 Error(s), 2 Warning(s).

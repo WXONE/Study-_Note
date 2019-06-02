@@ -1,9 +1,2 @@
 ﻿  实验5.cpp
-d:\study-_note\c++\作业\复杂对象实验\复杂对象实验\实验5.cpp(10): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: 参见“strcpy”的声明
-d:\study-_note\c++\作业\复杂对象实验\复杂对象实验\实验5.cpp(13): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: 参见“strcpy”的声明
-d:\study-_note\c++\作业\复杂对象实验\复杂对象实验\实验5.cpp(24): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: 参见“strcpy”的声明
-d:\study-_note\c++\作业\复杂对象实验\复杂对象实验\实验5.cpp(42): error C2664: “Pepple::Pepple(const Pepple &)”: 无法将参数 2 从“const char [15]”转换为“char *”
-  d:\study-_note\c++\作业\复杂对象实验\复杂对象实验\实验5.cpp(42): note: 从字符串文本转换将丢失 const 限定符(请参阅 /Zc:strictStrings)
+  复杂对象实验.vcxproj -> D:\Study-_Note\C++\作业\复杂对象实验\Debug\复杂对象实验.exe

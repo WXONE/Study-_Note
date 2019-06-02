@@ -1,51 +1,66 @@
-#include<iostream>
-#include<string.>
-#include"TDate.h"
-using namespace std;
-class Pepple {
-public:
-	Pepple(const char*pName, char*pAddress, int Height, int y, int m, int d) :birthday(y, m, d) {
-		height = Height;
-		name = new char[strlen(pName) + 1];
-		strcpy(name, pName);
-		name[strlen(pName)] = '\0';
-		address = new char[strlen(pAddress) + 1];
-		strcpy(address, pAddress);
-		address[strlen(pAddress)] = '\0';
-	}
-	~Pepple()
-	{
-		delete[]name;
-		delete[]address;
-	}
-	void SetAddress(const char * pAddress) {
-		delete[]address;
-		address = new char[strlen(pAddress) + 1];
-		strcpy(address, pAddress);
-		address[strlen(pAddress)] = '\0';
-	}
-	void print() {
-		cout << "姓名:" << endl;
-		cout << "身高:" << endl;
-		cout << "出生日期:" << endl;
-		birthday.Show();
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <string>
+#include <algorithm>
 
+using namespace std;
+
+typedef struct Date
+{
+	int year;
+	int month;
+	int day;
+	Date() {
+		year = 0;
+		month = 0;
+		day = 0;
 	}
-private :
-	char* name;
-	char* address;
-	int height;
-	TDate birthday;
+	Date(int yy, int mm, int dd) {
+		year = yy;
+		month = mm;
+		day = dd;
+	}
+
+	void display() {
+		printf("%d/%d/%d\n", year, month, day);
+	}
+}date;
+
+
+class People
+{
+private:
+	string name;
+	date birthday;
+	double height;
+	string address;
+public:
+	People(string name_, date birthday_, double height_, string address);
+	void ChangeAddress(string newAddress);
+	void display();
 };
 
-int main() {
-	Pepple ren("张三", "中北大学10号楼", 20, 1999, 4, 8);
-
-	ren.SetAddress("中北大学20号楼");
-
-	ren.print();
-
-	return 0;
-
+People::People(string name_, date birthday_, double height_, string address_) :
+	name(name_), birthday(birthday_), height(height_), address(address_) {
 }
 
+void People::ChangeAddress(string newAddress) {
+	address = newAddress;
+}
+
+void People::display() {
+	cout << "姓名：" << name << endl;
+	cout << "出生日期：";
+	birthday.display();
+	cout << "身高：" << height << endl;
+	cout << "住址：" << address << endl;
+}
+
+int main(int argc, char const *argv[]) {
+	People pep("魏祥一", date(2019, 7, 9), 181, "文瀛五");
+	pep.display();
+
+	system("pause");
+	return 0;
+}

@@ -1,0 +1,27 @@
+		ORG 0000H
+		
+		AJMP START
+		
+		ORG 30H
+
+START:
+
+		MOV SP,#50H
+		
+		MOV TMOD,#01000000B ;
+	
+		MOV TL1,#00H
+					
+		SETB TR1 ;
+
+LOOP: 	
+		MOV A,TL1
+		
+		CPL A
+
+
+		MOV P2,A
+
+		AJMP LOOP
+
+END
